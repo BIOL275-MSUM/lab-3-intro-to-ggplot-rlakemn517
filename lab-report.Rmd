@@ -92,9 +92,6 @@ distinct(birds, order)
 count(birds, order)
 
 ggplot(data = birds) + 
-  geom_bar(mapping = aes(x = order))
-
-ggplot(data = birds) + 
   geom_bar(mapping = aes(x = fct_infreq(order)), fill = "#C5351B") +
   labs(x = "Order", y = "Frequency (number of species)") +
   scale_y_continuous(limits = c(0, NA), expand = expansion(mult = 0)) +

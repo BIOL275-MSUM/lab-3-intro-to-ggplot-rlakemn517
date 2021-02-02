@@ -218,13 +218,6 @@ count(birds, order)
 
 ``` r
 ggplot(data = birds) + 
-  geom_bar(mapping = aes(x = order))
-```
-
-![](lab-report_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
-
-``` r
-ggplot(data = birds) + 
   geom_bar(mapping = aes(x = fct_infreq(order)), fill = "#C5351B") +
   labs(x = "Order", y = "Frequency (number of species)") +
   scale_y_continuous(limits = c(0, NA), expand = expansion(mult = 0)) +
@@ -237,7 +230,7 @@ ggplot(data = birds) +
   )
 ```
 
-![](lab-report_files/figure-gfm/unnamed-chunk-3-2.png)<!-- -->
+![](lab-report_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 > G. What kind of graph did you create? Why?
 

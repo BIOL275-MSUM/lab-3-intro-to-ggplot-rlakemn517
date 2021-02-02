@@ -21,5 +21,7 @@ The objectives of this lab are:
 The repository contains the following scripts:
 
 - [Lab Report 3](lab-report.md)
-- ___
+- [Turtorial R script](turtorial-walk-through.R)
+- [Firefly Data](FireFlies_Data.R)
+- [Bird Data](ebird_data.R)
 

@@ -240,9 +240,11 @@ species of Passeriformes than any other order
 
 ## Links to peer review
 
-I reviewed \_\_\_’s lab report at this URL: \_\_\_
+I reviewed Hiba Chaudhry’s lab report at this URL:
+<https://github.com/BIOL275-MSUM/lab-3-intro-to-ggplot-gt3637ut/issues/2>
 
-\_\_\_ reviewed my lab report at this URL: \_\_\_
+Hiba Chaudhry reviewed my lab report at this URL:
+<https://github.com/BIOL275-MSUM/lab-3-intro-to-ggplot-rlakemn517/issues/1>
 
 ## Session Info
 

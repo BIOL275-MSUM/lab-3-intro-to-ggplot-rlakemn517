@@ -1,7 +1,7 @@
 Lab 3 Report
 ================
 Rose Lakeman
-2021-02-02
+2021-02-03
 
 Instructions for this lab report can be found on [Your assignment
 section of Lab Assignment 3 Introduction to
@@ -44,7 +44,26 @@ fireflies_data <- read_csv("https://whitlockschluter.zoology.ubc.ca/wp-content/d
     ## )
 
 ``` r
-distinct(fireflies_data,spermatophoreMass)
+fireflies_data # print the data in the console
+```
+
+    ## # A tibble: 35 x 1
+    ##    spermatophoreMass
+    ##                <dbl>
+    ##  1             0.047
+    ##  2             0.037
+    ##  3             0.041
+    ##  4             0.045
+    ##  5             0.039
+    ##  6             0.064
+    ##  7             0.064
+    ##  8             0.065
+    ##  9             0.079
+    ## 10             0.07 
+    ## # … with 25 more rows
+
+``` r
+distinct(fireflies_data,spermatophoreMass) #view specific data
 ```
 
     ## # A tibble: 26 x 1
@@ -63,7 +82,7 @@ distinct(fireflies_data,spermatophoreMass)
     ## # … with 16 more rows
 
 ``` r
-count(fireflies_data,spermatophoreMass)
+count(fireflies_data,spermatophoreMass) #displays values of specified variable in the console
 ```
 
     ## # A tibble: 26 x 2
@@ -85,12 +104,12 @@ count(fireflies_data,spermatophoreMass)
 ggplot(data = fireflies_data) +
   geom_histogram(mapping = aes(x = spermatophoreMass),
                  fill = "#C5351B", color = "black", binwidth = 0.008) +
-  labs(x = "spermatophoreMass (mg)", y = "Frequency ") +
+  labs(x = "spermatophoreMass (mg)", y = "Frequency (spermatophoreMass)") +
   theme_classic() +
   theme(
     axis.title = element_text(face = "bold"),
     axis.text = element_text(color = "black", size = rel(1))
-  )
+  ) #function to produce the histogram
 ```
 
 ![](lab-report_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
@@ -161,25 +180,7 @@ birds <- ebird_taxonomy %>%           # start with the ebird_taxonomy data
   as_tibble() %>%                     # tibbles print better in the console
   filter(category == "species")       # remove non-species taxa
 
-distinct(birds, "species")
-```
-
-    ## # A tibble: 1 x 1
-    ##   `"species"`
-    ##   <chr>      
-    ## 1 species
-
-``` r
-count(birds, "species")
-```
-
-    ## # A tibble: 1 x 2
-    ##   `"species"`     n
-    ##   <chr>       <int>
-    ## 1 species     10721
-
-``` r
-distinct(birds, order)
+distinct(birds, order) #displays the variety of orders possible in the console
 ```
 
     ## # A tibble: 41 x 1
@@ -198,7 +199,7 @@ distinct(birds, order)
     ## # … with 31 more rows
 
 ``` r
-count(birds, order)
+count(birds, order)   #displays the different orders with the amount in each order 
 ```
 
     ## # A tibble: 41 x 2
@@ -227,7 +228,7 @@ ggplot(data = birds) +
     axis.text = element_text(color = "black"),
     axis.text.x = element_text(angle = 45, hjust = 1),
     axis.ticks.x = element_blank()
-  )
+  ) #functions that displays the bar graph, specifying the x and y axis
 ```
 
 ![](lab-report_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
@@ -264,7 +265,7 @@ sessioninfo::session_info()
     ##  collate  en_US.UTF-8                 
     ##  ctype    en_US.UTF-8                 
     ##  tz       America/Chicago             
-    ##  date     2021-02-02                  
+    ##  date     2021-02-03                  
     ## 
     ## ─ Packages ───────────────────────────────────────────────────────────────────
     ##  package     * version date       lib source        

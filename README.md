@@ -1,7 +1,7 @@
 Lab 3: Introduction to ggplot
 ================
 Rose Lakeman
-2021-02-02
+2021-02-03
 
 Welcome to my Lab 2 repository for Quantitative Biology BIOL 275 at
 MSUM.

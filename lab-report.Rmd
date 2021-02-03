@@ -13,6 +13,7 @@ Instructions for this lab report can be found on [Your assignment section of Lab
 
 ```{r}
 
+
 # Load Packages ------------------------------------------------------------
 
 library(tidyverse)
@@ -21,19 +22,22 @@ library(tidyverse)
 
 fireflies_data <- read_csv("https://whitlockschluter.zoology.ubc.ca/wp-content/data/chapter02/chap02q19FireflySpermatophoreMass.csv")
 
-distinct(fireflies_data,spermatophoreMass)
+fireflies_data # print the data in the console
 
-count(fireflies_data,spermatophoreMass)
+distinct(fireflies_data,spermatophoreMass) #view specific data
+
+count(fireflies_data,spermatophoreMass) #displays values of specified variable in the console
 
 ggplot(data = fireflies_data) +
   geom_histogram(mapping = aes(x = spermatophoreMass),
                  fill = "#C5351B", color = "black", binwidth = 0.008) +
-  labs(x = "spermatophoreMass (mg)", y = "Frequency ") +
+  labs(x = "spermatophoreMass (mg)", y = "Frequency (spermatophoreMass)") +
   theme_classic() +
   theme(
     axis.title = element_text(face = "bold"),
     axis.text = element_text(color = "black", size = rel(1))
-  )
+  ) #function to produce the histogram
+
 
 
 ```
@@ -74,6 +78,7 @@ Count(birds, species) and that told me there was 10721 species
 
 ```{r}
 
+
 # Load Packages -----------------------------------------------------------
 
 library(tidyverse)
@@ -85,11 +90,8 @@ birds <- ebird_taxonomy %>%           # start with the ebird_taxonomy data
   as_tibble() %>%                     # tibbles print better in the console
   filter(category == "species")       # remove non-species taxa
 
-distinct(birds, "species")
-count(birds, "species")
-
-distinct(birds, order)
-count(birds, order)
+distinct(birds, order) #displays the variety of orders possible in the console
+count(birds, order)   #displays the different orders with the amount in each order 
 
 ggplot(data = birds) + 
   geom_bar(mapping = aes(x = fct_infreq(order)), fill = "#C5351B") +
@@ -101,7 +103,9 @@ ggplot(data = birds) +
     axis.text = element_text(color = "black"),
     axis.text.x = element_text(angle = 45, hjust = 1),
     axis.ticks.x = element_blank()
-  )
+  ) #functions that displays the bar graph, specifying the x and y axis
+
+                         
 
                          
 ```
